@@ -204,14 +204,24 @@ Posteriormente se realizará la construcción de las imágenes para las platafor
 docker buildx build --platform linux/arm64/v8,linux/amd64 --no-cache -t "example:0.0.1" .
 ~~~
 
+## Repositorios
+
+Para el desarrollo y despliegue de este proyecto han sido necesarios 3 repositorios
+
+- [Data-collector](https://github.com/project-for-good/data-collector): en este repositorio se ha desarrollado el codigo del modulo que recoge los datos de internet, tambien hay archivos necesarios para la creacion de la imagen docker usada para el despliegue del modulo.
+
+- [Dbapi](https://github.com/project-for-good/data-collector): en este repositorio se ha desarrollado el codigo del modulo que recibe los datos del data-collector y se los envia a la base de datos, al igual que en el de data-collector en este repo tambien hay archivos necesarios para la creacion de la imagen docker.
+
+- [reusable-workflows](https://github.com/project-for-good/reusable-workflows): Este repo es el que recibe informacion de los otros dos para crear sus respectivas imagenes a través de workflows.
+
 ## Desarrollo Backend
 
-###Estructura
+### Estructura
 
 El backend consiste en tres módulos, uno que se ocupa de obtener los datos externos llamado data-colector, este módulo enviará la información que obtenga al módulo dbapi el cual no es más que una API que se encarga de almacenarla de manera estructurada en la la base de datos mediante la librería mongoose.
 
 
-###data-collector
+### Data-collector
 
 Este módulo se encarga de obtener información de diferentes fuentes, es debido a esto que este contenedor debe ser adaptable ya que cada fuente tiene una manera diferente de presentar la información, para que el data collector sea adaptable en torno a las fuentes que en la mayoría de casos son páginas web ha sido desarrollado en el lenguaje JavaScript ya que al estar todas las webs basadas en este lenguaje se facilita bastante la interacción con estas, y mediante la librería Puppeteer es posible desarrollar un programa capaz de navegar por webs de una manera eficiente y extraer la información aunque no esté en el formato requerido
 
@@ -349,7 +359,7 @@ spec:
 ~~~
 
 ## Desarrollo Frontend
-###Grafana
+### Grafana
 
 Para la visualización de datos se va a utilizar Grafana que es un software utilizado para la estructuración, almacenamiento y visualización de datos.
 
