@@ -49,6 +49,7 @@ Los tres municipios de Mallorca con mayor número de estudiantes universitarios 
 ## Captura de datos
 A continuación explicaremos a alto nivel cual es la estructura de la aplicación web que vamos a desarrollar.
 
+![aws services diagram](diagram.png)
 
 En el diagrama mostrado vemos 4 elementos que representan las aplicaciones que conforman la solución:
 Scraper web: esta aplicación se encarga de navegar por distintas webs, emulando una interacción humana y obteniendo los datos que nos interesan.
@@ -169,6 +170,7 @@ Para una rápida implementación de nuestras aplicaciones en el cluster de EKS, 
 
 En el siguiente diagrama se expresa de manera sencilla el funcionamiento de ArgoCD.
 
+![argo diagram](argoflow.png)
 
 Como podemos observar el ‘desarrollador’ sube los cambios a un repositorio Git y ArgoCD supervisa estos cambios y sincroniza la información con lo desplegado en nuestro clúster Kubernetes.
 
