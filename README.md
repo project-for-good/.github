@@ -82,10 +82,10 @@ Población por edad (no lo actualizan cada año)
 
 
 ### Casos Reales
-UIB -> Petra https://goo.gl/maps/iG1k2E623fYum4GQ9 
-UIB -> Alcudia https://goo.gl/maps/1NHPowQdTU5HS7RK8 
+[UIB -> Petra](https://goo.gl/maps/iG1k2E623fYum4GQ9)
+[UIB -> Alcudia](https://goo.gl/maps/1NHPowQdTU5HS7RK8)
 
-Comparar los precios aqui: https://www.tib.org/es/web/ctm/inicio 
+[Comparar los precios](https://www.tib.org/es/web/ctm/inicio)
 
 
 
